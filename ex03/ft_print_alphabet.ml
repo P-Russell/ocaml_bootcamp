@@ -1,32 +1,28 @@
 (* ************************************************************************** *)
 (*                                                                            *)
 (*                                                        :::      ::::::::   *)
-(*   ft_countdown.ml                                    :+:      :+:    :+:   *)
+(*   ft_print_alphabet.ml                               :+:      :+:    :+:   *)
 (*                                                    +:+ +:+         +:+     *)
 (*   By: prussell <marvin@42.fr>                    +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
-(*   Created: 2018/10/01 12:40:52 by prussell          #+#    #+#             *)
-(*   Updated: 2018/10/01 12:45:08 by prussell         ###   ########.fr       *)
+(*   Created: 2018/10/01 11:20:15 by prussell          #+#    #+#             *)
+(*   Updated: 2018/10/01 12:46:17 by prussell         ###   ########.fr       *)
 (*                                                                            *)
 (* ************************************************************************** *)
 
-let rec ft_countdown x =
-    if x <= 0 then
+let rec print_letters_starting_at x = 
+    if x <= (int_of_char 'z') then
         begin
-            print_int 0;
-            print_char '\n'
+        print_char (char_of_int x);
+        print_letters_starting_at (x + 1)
         end
     else
-        begin
-            print_int x;
-            print_char '\n';
-            ft_countdown(x - 1)
-        end
+        print_char '\n'
 
- 
-let main() = 
-    ft_countdown (-1);
-    ft_countdown (0);
-    ft_countdown (8)
+let ft_print_alphabet() = 
+    print_letters_starting_at (int_of_char 'a')
+    
+let main() =
+    ft_print_alphabet()
 
 let () = main()
