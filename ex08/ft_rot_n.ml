@@ -47,20 +47,14 @@ let rec ft_rot_n n str =
 let main() =
     let x = ft_rot_n 1 "abcdefghijklmnopqrstuvwxyz" in
         print_endline x;
-    
     let x = ft_rot_n 13 "abcdefghijklmnopqrstuvwxyz" in
         print_endline x;
-    
     let x = ft_rot_n 42 "1234567890" in
         print_endline x;
-    
     let x = ft_rot_n 0 "Damned !" in
         print_endline x;
-    
     let x = ft_rot_n 1 "" in
         print_endline x;
-
     let x = ft_rot_n 1 "NBzlk qnbjr !" in
         print_endline x
-    
 let() = main()
