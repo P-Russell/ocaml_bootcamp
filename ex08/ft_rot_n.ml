@@ -36,7 +36,6 @@ let rot_one (c : char) =
     else
         c
 
-
 let rec ft_rot_n n str = 
     if n <= 0 then
         str
@@ -45,11 +44,23 @@ let rec ft_rot_n n str =
         ft_rot_n (n - 1) (String.map rot_one str);
         end
 
-
 let main() =
-    let x = ft_rot_n 1 "ABCDEFGHIJKLMNOPQRSTUVWXYZ" in
+    let x = ft_rot_n 1 "abcdefghijklmnopqrstuvwxyz" in
+        print_endline x;
+    
+    let x = ft_rot_n 13 "abcdefghijklmnopqrstuvwxyz" in
+        print_endline x;
+    
+    let x = ft_rot_n 42 "1234567890" in
+        print_endline x;
+    
+    let x = ft_rot_n 0 "Damned !" in
+        print_endline x;
+    
+    let x = ft_rot_n 1 "" in
         print_endline x;
 
-    let x = ft_rot_n 1 "abcdefghijklmnopqrstuvwxyz" in
+    let x = ft_rot_n 1 "NBzlk qnbjr !" in
         print_endline x
+    
 let() = main()
